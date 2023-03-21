@@ -5,22 +5,28 @@
 
     A > 79, B > 60 to 79, C > 59 to 49, D > 40 to 49, E > less 40.
  # Project Setup
-       function studentMarks    (marks) {
-            if (marks >= 80 && marks <= 100) {
-                return 'A';
-            }else if (marks >= 60 && marks <= 79) {
-                return 'B';
-            }else if (marks >= 50 && marks <= 59) {
-                return 'C';
-            }else if (marks >= 40 && marks <= 49) {
-                return 'D';
-            }else if (marks < 40) {
-                return 'E';
-            }else {
-                return 'Invalid Input';
-            }
-    }
-    console.log(studentMarks(56));
+const marks = prompt("Please enter the student's marks (between 0 and 100)");
+
+const marksNumber = Number(marks);
+
+if (isNaN(marksNumber) || marksNumber < 0 || marksNumber > 100) {
+  console.log("Invalid input. Please enter a number between 0 and 100.");
+} else {
+  let grade;
+  if (marksNumber >= 80) {
+    grade = 'A';
+  } else if (marksNumber >= 60) {
+    grade = 'B';
+  } else if (marksNumber >= 50) {
+    grade = 'C';
+  } else if (marksNumber >= 40) {
+    grade = 'D';
+  } else {
+    grade = 'E';
+  }
+
+  console.log(`The student's grade is ${grade}.`);
+}
 
 # Author
     Emmanuel Kipsang
