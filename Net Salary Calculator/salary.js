@@ -1,33 +1,4 @@
-## Week 1 code Challange.
-
-# Description
-  This repo contains 3 programs. The first program is the one that calculates the grade of the students according to the input marks, the second one calculates the Net salary of the payee and the third one detects one's speed.
-# Project Setup
-  # Grade Generator
-      const marks = prompt("Please enter the student's marks (between 0 and 100)");
-
-const marksNumber = Number(marks);
-
-if (isNaN(marksNumber) || marksNumber < 0 || marksNumber > 100) {
-  console.log("Invalid input. Please enter a number between 0 and 100.");
-} else {
-  let grade;
-  if (marksNumber >= 80) {
-    grade = 'A';
-  } else if (marksNumber >= 60) {
-    grade = 'B';
-  } else if (marksNumber >= 50) {
-    grade = 'C';
-  } else if (marksNumber >= 40) {
-    grade = 'D';
-  } else {
-    grade = 'E';
-  }
-
-  console.log(`The student's grade is ${grade}.`);
-}
-  # Net Salary Calculator
-    // Function for the Tax
+// Function for the Tax
 function calculatePayeeTax(salary) {
     let tax = 0;
     if (salary > 24000) {
@@ -95,21 +66,3 @@ function calculatePayeeTax(salary) {
     }
     return nssf;
   }
-  # Speed Detector
-    function checkSpeed(speed) {
-    const speedLimit = 70;
-    const kmPerDemeritPoint = 5;
-  
-    if (speed <= speedLimit) {
-      console.log("Ok");
-    } else {
-      const demeritPoints = Math.floor((speed - speedLimit) / kmPerDemeritPoint);
-      if (demeritPoints > 12) {
-        console.log("License suspended");
-      } else {
-        console.log("Points: " + demeritPoints);
-      }
-    }
-  }
-# Author
-    Emmanuel Kipsang
